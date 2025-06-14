@@ -1,0 +1,141 @@
+  .signupcontainer {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+
+  }
+  
+  .signupbox {
+    display: flex;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 85vh;
+  }
+  
+  .signupleft,
+  .signupright {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .signupleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top left , rgb(255, 255, 255) 30%, rgb(0, 0, 0) 0%);
+    color: white;
+    text-align: center;
+    height: 75vh;
+  }
+  
+  .signupleft h2 {
+    margin-bottom: 20px;
+
+  }
+  
+  .signupleft p {
+    font-size: 14px;
+  }
+  
+  .signupright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top left , rgb(255, 255, 255) 80%, rgb(0, 0, 0) 10%);
+    color: black;
+    height: 75vh;
+  }
+  
+  .signupright h2 {
+    margin-bottom: 20px;
+    margin-left: 40%;
+    text-decoration: underline;
+  }
+  
+  .inputgroup {
+    margin-bottom: 20px;
+  }
+  
+  .inputgroup label {
+    padding-left: 20px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 18%;
+    font-size: larger;
+  }
+  
+  .inputgroup input {
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    margin-left: 18%;
+    border-bottom: 2px solid black;
+  }
+  
+  .signupbtn {
+    width: 80%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .signupbtn:hover {
+    background-color: #333;
+    color: #f5f5f5;
+  }
+  
+  .signupright p {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .signupright a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .signupright a:hover {
+    text-decoration: underline;
+  }
+  .passin{
+    display: flex;
+  }
+  
+  #showpass{
+    border: none;
+    width: 50px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+  }
+  #showpass i{
+    cursor: pointer;
+    /* font-Size: '24px'; */
+    margin-Left: '20px';
+    /* color: #333; */
+  }
+  .error{
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  #phoneno{
+    text-decoration: none;
+    
+
+  }
+
+  #footer{
+    font-size: larger;
+  }  
+

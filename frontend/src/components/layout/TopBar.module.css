@@ -1,0 +1,72 @@
+.topBar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .companyName {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .themeToggle, .loginButton {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .themeToggle {
+    background: none;
+    font-size: 18px;
+  }
+  .themeToggle:hover{
+    background-color:rgba(117, 91, 71, 0.679);
+  }
+  
+  .loginButton {
+    background-color: #ff6b6b;
+    color: white;
+  }
+
+  .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .userName {
+    font-weight: bold;
+    color: white;
+  }
+
+  .profilePic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+
+  .logoutButton {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logoutButton:hover {
+    background-color: #c82333;
+  }
+  
+  

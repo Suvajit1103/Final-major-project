@@ -1,0 +1,119 @@
+
+
+.logincontainer {
+  padding-left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.loginbox {
+  display: flex;
+  width: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loginleft,
+.loginright {
+  flex: 1;
+  padding: 40px;
+}
+
+.loginleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to top right , rgb(255, 255, 255) 80%, rgb(0, 0, 0) 30%);
+  color: black;
+}
+
+.loginleft h2 {
+  margin-bottom: 20px;
+}
+
+.Sinputgroup {
+  margin-bottom: 20px;
+}
+
+.Sinputgroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.Sinputgroup input {
+  width: 80%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.loginbtn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginbtn:hover {
+  background-color: #333;
+  color: #f5f5f5;
+}
+
+.loginleft p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.loginleft a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.loginleft a:hover {
+  text-decoration: 2px #007bff underline;
+}
+
+.loginright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to top right , rgb(255, 255, 255) 30%, rgb(0, 0, 0) 0%);
+  color: white;
+  text-align: center;
+}
+.loginright h2{
+  margin-bottom: 20px;
+}
+.loginleft p{
+  font-size: 14px;
+}
+.passin{
+  display: flex;
+}
+
+#showpass{
+  border: none;
+  width: 50px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+#showpass i{
+  cursor: pointer;
+  /* font-Size: '24px'; */
+  margin-Left: '20px';
+}
+
+
+
+
+
+

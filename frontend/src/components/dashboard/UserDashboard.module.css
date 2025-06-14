@@ -1,0 +1,112 @@
+.userContainer {
+  height: 90vh;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+}
+
+.userContainer h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse:separate;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: bold;
+}
+
+.table tr {
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .table,
+  .table thead,
+  .table tbody,
+  .table th,
+  .table td,
+  .table tr {
+    display: block;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+  }
+
+  .table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+
+.status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.statusPaid {
+  background-color:  #9fffb5;
+  color: #149532;
+}
+
+.statusPending {
+  background-color: #ffebb0;
+  color: #a5a202;
+}
+
+.statusRejected {
+  background-color: #ffaeb6;
+  color: #c10316;
+}
+
+.statusApproved {
+  background-color: #c4c6c9;
+  color: rgb(49, 49, 49);
+}

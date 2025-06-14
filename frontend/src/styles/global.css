@@ -1,0 +1,25 @@
+/* :root {
+    --bg-color: #f4f7fc;
+    --text-color: #000;
+    --card-bg: #fff;
+  } */
+  
+  .dark {
+    --bg-color: #121212;
+    --text-color: #fff;
+    --card-bg: #1e1e1e;
+  }
+  
+  /* body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+  }
+   */
+  .card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  

@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #004fa4;
+    --secondary-color: #343a40;
+    color: #181818;
+  }
+  
+  .dark {
+    --primary-color: #222;
+    --secondary-color: #444;
+    background-color: #181818;
+    color: white;
+  }
+  
+  .mainContainer {
+    display: flex;
+  }
+  
