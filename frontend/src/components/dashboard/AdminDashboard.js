@@ -78,7 +78,8 @@ const AdminDashboard = () => {
           <tr>
             <th>Name</th>
             <th>Contact</th>
-            <th>Amount</th>
+            <th>Total Amount</th>
+             <th>Amount Left</th>
             <th>Duration</th>
             <th>Current Status</th>
             <th>Update Status</th>
@@ -90,6 +91,7 @@ const AdminDashboard = () => {
               <td>{loan.userId?.name || loan.name || "N/A"}</td>
               <td>{loan.userId?.phone || loan.contactNumber || "N/A"}</td>
               <td>₹{loan.loanAmount || "N/A"}</td>
+               <td>₹{loan.amountLeft ?? loan.loanAmount}</td>
               <td>{loan.loanDuration || "N/A"} months</td>
               <td>{loan.status}</td>
               <td>

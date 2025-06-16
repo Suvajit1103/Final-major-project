@@ -23,6 +23,7 @@
   
   .sidebar a.active {
     background-color: var(--primary-color);
+    text-decoration: none;
   }
 
  .dropdownHeader {
@@ -34,6 +35,7 @@
   gap: 10px;
   font-weight: bold;
   color: aliceblue;
+  
 }
 
 .subMenu {
@@ -61,4 +63,39 @@
   background-color: #f0f0f0;
   color: black;
   border-radius: 5px;
+}
+
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin: 12px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.profileImage {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.profileSection a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  color: #010000;
+  font-weight: bold;
+  margin-top: 5px;
 }

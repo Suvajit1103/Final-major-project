@@ -15,6 +15,13 @@ const Register = () => {
 
 const handleSignup = async (e) => {
   e.preventDefault();
+
+   // Check for strong password before sending the request
+  if (passwordStrength !== "Password is strong.") {
+    alert("Please enter a strong password before registering.");
+    return;
+  }
+
   try {
     const response = await axios.post("http://localhost:5000/api/auth/register", user);
     console.log("Registration successful", response.data);
@@ -78,7 +85,7 @@ const handleSignup = async (e) => {
 
           <div className={styles.inputgroup}>
             <label htmlFor="phone no">Phone No:</label>
-            <input type="number" id="phone-no" placeholder="Enter your number" value={user.phone}onChange={(e) => setUser({ ...user, phone: e.target.value })}/>
+            <input type="tel" id="phone-no" placeholder="Enter your number" value={user.phone}onChange={(e) => setUser({ ...user, phone: e.target.value })}/>
             
           </div>
 

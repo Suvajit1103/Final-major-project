@@ -13,6 +13,7 @@ import Aboutus from "./components/about-us/aboutus";
 import Contactus from "./components/Contact-us/contactus";
 import LoanDetails from "./components/pages/LoanDetails";
 import LoanPaymentForm from "./components/pages/LoanPaymentForm";
+import ProfileSettings from "./components/pages/ProfileSettings";
 import "./App.css";
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
             <Route path="/contactus" element={<Contactus />} />
             <Route path="/loan-details/:id" element={<LoanDetails />} />
             <Route path="/loan-payment-form/:id" element={<LoanPaymentForm/>}/>
-            
+            <Route path="/profile-settings" element={<ProfileSettings />} />
             
           </Routes>
         </div>

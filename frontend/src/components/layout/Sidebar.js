@@ -14,8 +14,8 @@ const Sidebar = () => {
   const [authOpen, setAuthOpen] = useState(false);
    const [dashboardOpen, setDashboardOpen] = useState(false);
   const [manageLoansOpen, setManageLoansOpen] = useState(false);
-  const { isLoggedIn, logout } = useAuth();  // <-- Get logout from context
-   const navigate = useNavigate(); // ⬅️ Hook to programmatically navigate
+  const { isLoggedIn, user, logout } = useAuth();  
+   const navigate = useNavigate();
 
    const handleLogout = () => {
     logout();         // clear user auth (context)
@@ -25,6 +25,28 @@ const Sidebar = () => {
 
   return (
     <div className={styles.sidebar}>
+
+          {/* User Profile Section */}
+      {isLoggedIn && user && (
+        <div className={styles.profileSection}>
+          <img
+             src={
+                   user?.profilePic
+                  ? `http://localhost:5000${user.profilePic}` 
+                  : "/default-profile.avif"
+                }
+            alt="Profile"
+            className={styles.profileImage}
+          />
+          <div>
+            <p className={styles.userName}>Hi ,{user.name}</p>
+            <NavLink to="/profile-settings" className={styles.profileLink}>
+              ⚙️ Profile Settings
+            </NavLink>
+          </div>
+        </div>
+      )}
+
       {/* Authentication Dropdown */}
       {!isLoggedIn && (
         <>
@@ -50,37 +72,61 @@ const Sidebar = () => {
       {/* Private Routes - Only visible when logged in */}
       {isLoggedIn && (
         <>
-           {/* Dashboard Dropdown */}
-          <div
-            className={styles.dropdownHeader}
-            onClick={() => setDashboardOpen(!dashboardOpen)}
-          >
-            <AiOutlineDashboard /> Dashboard  <IoIosArrowUp />
-          </div>
-          {dashboardOpen && (
-            <div className={styles.subMenu}>
-              <NavLink to="/admin-dashboard" className={({ isActive }) => (isActive ? styles.active : "")}>
-                <AiFillProduct />  All Loans
-          </NavLink>
-            </div>
+           
+        {/* Admin-only Dashboard */}
+          {user?.role === "admin" && (
+            <>
+              <div
+                className={styles.dropdownHeader}
+                onClick={() => setDashboardOpen(!dashboardOpen)}
+              >
+                <AiOutlineDashboard /> Dashboard <IoIosArrowUp />
+              </div>
+              {dashboardOpen && (
+                <div className={styles.subMenu}>
+                  <NavLink
+                    to="/admin-dashboard"
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    <AiFillProduct /> All Loans
+                  </NavLink>
+                </div>
+              )}
+            </>
           )}
           
-          {/* Manage Loans Dropdown */}
-          <div
-            className={styles.dropdownHeader}
-            onClick={() => setManageLoansOpen(!manageLoansOpen)}
-          >
-            <MdOutlineManageSearch /> Manage Loans  <IoIosArrowUp />
-          </div>
-          {manageLoansOpen && (
-            <div className={styles.subMenu}>
-              <NavLink to="/user-dashboard" className={({ isActive }) => (isActive ? styles.active : "")}>
-                <AiFillProduct />  My Loan
-          </NavLink>
-              <NavLink to="/loan-application" className={({ isActive }) => (isActive ? styles.active : "")}>
-            <FaWpforms /> Loan Application
-          </NavLink>
-            </div>
+           {/* User-only Manage Loans */}
+          {user?.role === "user" && (
+            <>
+              <div
+                className={styles.dropdownHeader}
+                onClick={() => setManageLoansOpen(!manageLoansOpen)}
+              >
+                <MdOutlineManageSearch /> Manage Loans <IoIosArrowUp />
+              </div>
+              {manageLoansOpen && (
+                <div className={styles.subMenu}>
+                  <NavLink
+                    to="/user-dashboard"
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    <AiFillProduct /> My Loan
+                  </NavLink>
+                  <NavLink
+                    to="/loan-application"
+                    className={({ isActive }) =>
+                      isActive ? styles.active : ""
+                    }
+                  >
+                    <FaWpforms /> Loan Application
+                  </NavLink>
+                </div>
+              )}
+            </>
           )}
           
 

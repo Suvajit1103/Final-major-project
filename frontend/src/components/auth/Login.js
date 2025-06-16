@@ -23,13 +23,10 @@ const Login = () => {
         password,
       });
 
-      // ✅ Save token
-      login(res.data.token);
-      localStorage.setItem("token", res.data.token);
+        const { token, user } = res.data;
 
-      // ✅ Save user with role
-      const user = res.data.user;
-      localStorage.setItem("user", JSON.stringify(user));
+    // ✅ Call login with both token and user
+    login(token, user);
 
       // ✅ Navigate based on role
       if (user.role === "admin") {

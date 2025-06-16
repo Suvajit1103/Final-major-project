@@ -46,7 +46,7 @@ const handleSubmit = async (e) => {
       <form className={styles.form} onSubmit={handleSubmit}>
         <h2>Loan Application</h2>
         <input type="text" name="name" placeholder="Name" required onChange={handleChange} />
-        <input type="number" name="contactNumber" placeholder="Phone No." required onChange={handleChange} />
+        <input type="tel" name="contactNumber" placeholder="Phone No." required onChange={handleChange} />
         <input type="number" name="loanAmount" placeholder="Loan Amount" required onChange={handleChange} />
         <input type="number" name="loanDuration" placeholder="Loan Duration (Months)" required onChange={handleChange} />
 

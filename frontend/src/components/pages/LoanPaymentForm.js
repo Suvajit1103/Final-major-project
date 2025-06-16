@@ -6,7 +6,9 @@ const LoanPaymentForm = ({ onSuccess }) => {
   const { id: loanId } = useParams();
   const location = useLocation();
   const navigate = useNavigate();
-  const repayments = location.state?.repayments || [];
+  
+
+  
 
   const [amount, setAmount] = useState(0);
   const [minAmount, setMinAmount] = useState(0);
@@ -14,6 +16,9 @@ const LoanPaymentForm = ({ onSuccess }) => {
 
   // ⏱️ Find the next due (unpaid or partially paid) installment
   useEffect(() => {
+
+     const repayments = location.state?.repayments || [];
+
     const nextDue = repayments.find(
       (r) => r.status === "PENDING" || r.status === "PARTIALLY PAID"
     );
@@ -24,7 +29,7 @@ const LoanPaymentForm = ({ onSuccess }) => {
       alert("All repayments are already paid.");
       navigate(`/loan-details/${loanId}`);
     }
-  }, [repayments, loanId, navigate]);
+  }, [location.state?.repayments, loanId, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

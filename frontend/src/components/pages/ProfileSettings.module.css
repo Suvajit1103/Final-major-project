@@ -1,0 +1,127 @@
+.profileSettings {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profilePicSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.profileImagePreview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-bottom: 12px;
+}
+
+.fileInput {
+  margin-bottom: 10px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.uploadBtn,
+.removeBtn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.uploadBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+.removeBtn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.uploadBtn:hover {
+  background-color: #0056b3;
+}
+
+.removeBtn:hover {
+  background-color: #c82333;
+}
+
+.formGroup {
+  margin-bottom: 18px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.formGroup input:focus {
+  border-color: #007bff;
+}
+
+.saveButton {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 480px) {
+  .profileSettingsContainer {
+    padding: 16px;
+  }
+
+  .profileImagePreview {
+    width: 90px;
+    height: 90px;
+  }
+
+  .saveButton {
+    font-size: 14px;
+  }
+}
