@@ -16,7 +16,7 @@ const ScheduledRepaymentSchema = new mongoose.Schema({
 
 
 const LoanSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true},
    name: String,
   contactNumber: Number,
   loanAmount: Number,

@@ -3,10 +3,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { authMiddleware, adminMiddleware } = require("./middleware/authmiddleware");
+const path = require("path");
 
 const authRoutes = require("./routes/authRoutes");
 const loanRoutes = require("./routes/loanRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
+
 
 
 const app = express();
@@ -22,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 app.use("/api/auth", authRoutes);
 app.use("/api/loans", loanRoutes);
-app.use("/api/payments",paymentRoutes);
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 
 

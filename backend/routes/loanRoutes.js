@@ -26,7 +26,7 @@ router.post("/", authMiddleware, async (req, res) => {
 
 
     const newLoan = new Loan({
-      userId: req.user.userId, // From authMiddleware
+      userId: req.user._id, // From authMiddleware
       name,
       contactNumber,
       loanAmount: parseFloat(loanAmount),
@@ -47,7 +47,7 @@ router.post("/", authMiddleware, async (req, res) => {
 //  Fixed Get User Loans Route
 router.get("/user/:userId", authMiddleware, async (req, res) => {
   try {
-    const loans = await Loan.find({ userId: req.user.userId });
+    const loans = await Loan.find({ userId: req.user._id });
     res.json(loans);
   } catch (err) {
     console.error("Error fetching user loans:", err);
